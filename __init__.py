@@ -110,14 +110,11 @@ class Shader_OT_DIAMOND(bpy.types.Operator):
         add3_node.label = "Add 3"
         add3_node.hide = False
         add3_node.select = False
-        
         #-----------linkind node------------
         material_diamond.node_tree.links.new(glass1_node.outputs[0],add1_node.inputs[0]) #Glass1 link node Addshader1
         material_diamond.node_tree.links.new(glass2_node.outputs[0],add1_node.inputs[1]) #Glass2 link node Addshader1
-        
         material_diamond.node_tree.links.new(glass3_node.outputs[0], add2_node.inputs[0])
         material_diamond.node_tree.links.new(glass4_node.outputs[0], add2_node.inputs[1])
-        
         #material_diamond.node_tree.links.new(add1_node.outputs[0], mix1_node.inputs[1])
         
         material_diamond.node_tree.links.new(add1_node.outputs[0],add3_node.inputs[0])
