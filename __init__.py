@@ -147,11 +147,7 @@ class Shader_OT_DIAMOND(bpy.types.Operator):
         image_node.image = tex
         return{'FINISHED'}
 #-----------------------------------------------------------------------------------------------------------------------------------------------------#
-
-        
-        
-        
-        
+   
 def register():
     bpy.utils.register_class(ShaderMainPanel)
     bpy.utils.register_class(Shader_OT_DIAMOND)
